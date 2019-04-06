@@ -1,0 +1,38 @@
+<html>
+    <body>
+        Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name">
+        <br><div id="check" style="color:red;"></div>
+        Numbers: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="number">
+        <br><div id="check1" style="color:red;"></div>
+        <input type="button" value="submit" onclick="validate()">
+        <input type="text" value="status" id='a'>
+        
+
+
+        <script>
+        function validate(){
+            var name=document.getElementById('name').value;
+            var number=document.getElementById('number').value;
+            
+
+            var regex1=/^[a-zA-Z]+$/;
+            var regex2=/^[0-9]+$/;
+            if(regex1.test(name)==false){
+                document.getElementById('check').innerHTML="name error"; 
+            }
+            else if(regex2.test(number)==false)            {
+                
+                document.getElementById('check1').innerHTML="number error";
+                
+            }
+            else{
+                document.getElementById('a').value="Regiatration Successful";
+                
+                
+            }
+
+            
+        }
+        </script>
+    </body>
+</html>
